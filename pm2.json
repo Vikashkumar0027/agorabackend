@@ -1,0 +1,15 @@
+{
+    "apps":[
+        {
+            "name":"agorabackend",
+            "script":"./index.js",
+            "watch": false,
+            "ignore_watch":["node_modules", "public"],
+            "instances":1,
+            "exec_mode":"fork",
+            "env":{
+                "DB_NAME":"agorabackend"
+            }
+        }
+    ]
+}
