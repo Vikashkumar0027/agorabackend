@@ -7,10 +7,13 @@ const { RtcTokenBuilder, RtcRole } = require('agora-access-token'); // For Agora
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
-  cors: {
-    origin: ["http://localhost:8100", "capacitor://localhost"], // Allow your Ionic app origin
-    methods: ["GET", "POST"]
-  }
+//   cors: {
+//     origin: ["http://localhost:8100", "capacitor://localhost"], // Allow your Ionic app origin
+//     methods: ["GET", "POST"]
+//   }
+cors: {
+  origin: "*"
+}
 });
 
 // Store connected users (mapping their application userId to socket.id)
